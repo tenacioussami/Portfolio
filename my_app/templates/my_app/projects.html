@@ -1,0 +1,30 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}Projects | My Portfolio{% endblock %}
+
+{% block content %}
+
+<div class="page-wrap">
+<h1 class="page-title">My Projects</h1>
+<p class="page-subtitle">A few things I've built across robotics, IoT, and software.</p>
+
+<div class="project-grid">
+    {% for project in projects %}
+        <div class="project-card">
+            {% if project.image %}
+                <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img">
+            {% endif %}
+            <div class="card-body">
+                <h3>{{ project.title }}</h3>
+                <p class="tech">{{ project.technology }}</p>
+                <p>{{ project.short_description }}</p>
+                <a href="{% url 'my_app:project_detail' project.pk %}" class="btn">View Details</a>
+            </div>
+        </div>
+    {% empty %}
+        <p>No projects added yet. Add some from the admin panel.</p>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}

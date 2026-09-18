@@ -1,0 +1,35 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block title %}Home | Md Farhan Hossain Sami{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-glow"></div>
+    <img src="{% static 'my_app/images/profile.jpg' %}" alt="{{ name }}" class="profile-pic">
+    <div class="hero-text">
+        <p class="eyebrow">{{ role }}</p>
+        <h1>Hi, I'm {{ name }}</h1>
+        <p class="hero-intro">{{ intro }}</p>
+        <div class="hero-actions">
+            <a href="{% url 'my_app:project_list' %}" class="btn">View My Projects</a>
+            <a href="{% url 'my_app:about' %}#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+    </div>
+</section>
+
+<section class="highlight-strip">
+    <p><strong>Currently:</strong> Research Intern at CASSA, IUB — working on a Transit Array Radio Telescope (TART).</p>
+</section>
+
+<section class="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+        {% for skill in skills %}
+            <span class="skill-tag">{{ skill }}</span>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

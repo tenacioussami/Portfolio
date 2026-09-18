@@ -1,0 +1,50 @@
+[
+  {
+    "model": "my_app.project",
+    "pk": 1,
+    "fields": {
+      "title": "SoccerBot",
+      "short_description": "Robotic soccer player with autonomous navigation and ball detection.",
+      "description": "Designed and built an autonomous robotic soccer player capable of real-time ball detection and navigation on the field, using computer vision for tracking and custom logic for path planning and positioning.",
+      "technology": "Python, OpenCV, Arduino",
+      "github_link": "https://github.com/tenacioussami",
+      "created_at": "2024-06-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "my_app.project",
+    "pk": 2,
+    "fields": {
+      "title": "CanSet",
+      "short_description": "Weather monitoring system with sensor data pipeline.",
+      "description": "Developed a weather monitoring system integrating multiple environmental sensors, with a data pipeline to collect, process, and log readings for analysis.",
+      "technology": "Arduino, Python, C++",
+      "github_link": "https://github.com/tenacioussami",
+      "created_at": "2025-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "my_app.project",
+    "pk": 3,
+    "fields": {
+      "title": "Line Following Robot",
+      "short_description": "Autonomous mobile robot using IR sensors.",
+      "description": "Built an autonomous mobile robot that follows a track using IR sensors, implementing control algorithms for smooth path tracking and extensive testing for reliability.",
+      "technology": "Arduino, C++",
+      "github_link": "https://github.com/tenacioussami",
+      "created_at": "2024-02-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "my_app.project",
+    "pk": 4,
+    "fields": {
+      "title": "IoT-Based Hospital Room Monitoring System",
+      "short_description": "IoT architecture with a live analytics dashboard.",
+      "description": "Built an IoT-based system to monitor hospital room conditions in real time, including sensor architecture, data transmission, and an analytics dashboard for visualization.",
+      "technology": "IoT, Python, Arduino",
+      "github_link": "https://github.com/tenacioussami",
+      "created_at": "2025-05-01T00:00:00Z"
+    }
+  }
+]

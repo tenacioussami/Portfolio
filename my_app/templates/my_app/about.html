@@ -1,0 +1,94 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}About | Md Farhan Hossain Sami{% endblock %}
+
+{% block content %}
+
+<div class="page-wrap">
+
+<section>
+    <h1 class="page-title">About Me</h1>
+    <p class="page-subtitle">CSE student, robotics builder and radio-astronomy research intern.</p>
+</section>
+
+<section class="about-section">
+    <h2>Experience</h2>
+    <div class="timeline">
+        {% for job in experience %}
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3>{{ job.role }}</h3>
+                <p class="timeline-meta">{{ job.org }} · {{ job.period }}</p>
+                <p>{{ job.details }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="about-section">
+    <h2>Education</h2>
+    <div class="timeline">
+        {% for edu in education %}
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3>{{ edu.degree }}</h3>
+                <p class="timeline-meta">{{ edu.school }} · {{ edu.period }}</p>
+                <p>{{ edu.details }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="about-section">
+    <h2>Skills</h2>
+    <div class="skill-groups">
+        {% for group_name, group_skills in skill_groups %}
+            <div class="skill-group">
+                <h4>{{ group_name }}</h4>
+                <div class="skill-list">
+                    {% for skill in group_skills %}
+                        <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="about-section">
+    <h2>Seminars &amp; Workshops</h2>
+    <div class="workshop-grid">
+        {% for w in workshops %}
+            <div class="workshop-card">
+                <h3>{{ w.title }}</h3>
+                <p>{{ w.details }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="about-section" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+        <a href="mailto:mdfarhanhossainsami@gmail.com" class="contact-card">
+            <h4>Email</h4>
+            <p>mdfarhanhossainsami@gmail.com</p>
+        </a>
+        <a href="tel:+8801715027583" class="contact-card">
+            <h4>Phone</h4>
+            <p>+880 1715-027583</p>
+        </a>
+        <a href="https://github.com/tenacioussami" target="_blank" class="contact-card">
+            <h4>GitHub</h4>
+            <p>tenacioussami</p>
+        </a>
+        <a href="https://linkedin.com/in/mdfarhanhossainsami" target="_blank" class="contact-card">
+            <h4>LinkedIn</h4>
+            <p>mdfarhanhossainsami</p>
+        </a>
+    </div>
+</section>
+
+</div>
+
+{% endblock %}
